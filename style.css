@@ -74,57 +74,75 @@ body {
 
 /* Panel 5 */
 @keyframes scan5 {
-  0%,31.25%,68.75%,100% { background-color: var(--dim-color); box-shadow: inset 0 0 8px #000; }
-  37.5%,62.5% { background-color: var(--beam-color); box-shadow: 0 0 15px #ff2a2a,0 0 30px rgba(255,42,42,0.8),0 0 50px rgba(255,42,42,0.5); }
-  43.75%,56.25% { background-color: rgba(255,42,42,0.7); box-shadow: 0 0 8px #ff2a2a,0 0 16px rgba(255,42,42,0.5); }
-  50%,50% { background-color: rgba(255,42,42,0.4); box-shadow: 0 0 4px #ff2a2a,0 0 8px rgba(255,42,42,0.3); }
-}
-
-/* Panel 6 */
-@keyframes scan6 {
-  /* Default dim */
-  0%, 31.25%, 100% { 
-    background-color: var(--dim-color); 
-    box-shadow: inset 0 0 8px #000; 
+  0%, 25%, 100% {
+    background-color: var(--dim-color);
+    box-shadow: inset 0 0 8px #000;
   }
 
-  /* Left → Right sweep */
-  34% { 
-    background-color: rgba(255,42,42,0.7); 
-    box-shadow: 0 0 8px #ff2a2a, 0 0 16px rgba(255,42,42,0.5); 
+  28% {
+    background-color: rgba(255,42,42,0.7);
+    box-shadow: 0 0 8px #ff2a2a, 0 0 16px rgba(255,42,42,0.5);
   }
-  35.25% { 
-    background-color: var(--beam-color); 
+  29.25% {
+    background-color: var(--beam-color);
     box-shadow: 0 0 15px #ff2a2a,
                 0 0 30px rgba(255,42,42,0.8),
-                0 0 50px rgba(255,42,42,0.5); 
+                0 0 50px rgba(255,42,42,0.5);
   }
-  36.5% { 
-    background-color: rgba(255,42,42,0.7); 
-    box-shadow: 0 0 8px #ff2a2a, 0 0 16px rgba(255,42,42,0.5); 
+  30.5% {
+    background-color: rgba(255,42,42,0.7);
+    box-shadow: 0 0 8px #ff2a2a, 0 0 16px rgba(255,42,42,0.5);
   }
-  37.5%, 58% {   /* faint glow persists until panel 7 & 8 finish */
-    background-color: rgba(255,42,42,0.4); 
-    box-shadow: 0 0 4px #ff2a2a, 0 0 8px rgba(255,42,42,0.3); 
+
+  /* Faint glow — lingers longer than panel 6 */
+  31.5%, 68% {
+    background-color: rgba(255,42,42,0.4);
+    box-shadow: 0 0 4px #ff2a2a, 0 0 8px rgba(255,42,42,0.3);
   }
 
   /* Right → Left sweep */
-  58.75% { 
-    background-color: var(--beam-color); 
+  68.75% {
+    background-color: var(--beam-color);
     box-shadow: 0 0 15px #ff2a2a,
                 0 0 30px rgba(255,42,42,0.8),
-                0 0 50px rgba(255,42,42,0.5); 
+                0 0 50px rgba(255,42,42,0.5);
   }
-  60% { 
-    background-color: rgba(255,42,42,0.7); 
-    box-shadow: 0 0 8px #ff2a2a, 0 0 16px rgba(255,42,42,0.5); 
+  70% {
+    background-color: rgba(255,42,42,0.7);
+    box-shadow: 0 0 8px #ff2a2a, 0 0 16px rgba(255,42,42,0.5);
   }
-  61.25%, 95% {   /* faint glow persists almost to end */
-    background-color: rgba(255,42,42,0.4); 
-    box-shadow: 0 0 4px #ff2a2a, 0 0 8px rgba(255,42,42,0.3); 
+  71%, 99% {
+    background-color: rgba(255,42,42,0.4);
+    box-shadow: 0 0 4px #ff2a2a, 0 0 8px rgba(255,42,42,0.3);
   }
 }
 
+
+
+/* Panel 6 */
+@keyframes scan6 {
+  0%, 31.25%, 100% {
+    background-color: var(--dim-color);
+    box-shadow: inset 0 0 8px #000;
+  }
+
+  34% { background-color: rgba(255,42,42,0.7); box-shadow: 0 0 8px #ff2a2a,0 0 16px rgba(255,42,42,0.5); }
+  35.25% { background-color: var(--beam-color); box-shadow: 0 0 15px #ff2a2a,0 0 30px rgba(255,42,42,0.8),0 0 50px rgba(255,42,42,0.5); }
+  36.5% { background-color: rgba(255,42,42,0.7); box-shadow: 0 0 8px #ff2a2a,0 0 16px rgba(255,42,42,0.5); }
+
+  /* Faint glow — shorter than panel 5 */
+  37.5%, 58% {
+    background-color: rgba(255,42,42,0.4);
+    box-shadow: 0 0 4px #ff2a2a,0 0 8px rgba(255,42,42,0.3);
+  }
+
+  58.75% { background-color: var(--beam-color); box-shadow: 0 0 15px #ff2a2a,0 0 30px rgba(255,42,42,0.8),0 0 50px rgba(255,42,42,0.5); }
+  60% { background-color: rgba(255,42,42,0.7); box-shadow: 0 0 8px #ff2a2a,0 0 16px rgba(255,42,42,0.5); }
+  61.25%, 95% {
+    background-color: rgba(255,42,42,0.4);
+    box-shadow: 0 0 4px #ff2a2a,0 0 8px rgba(255,42,42,0.3);
+  }
+}
 
 @keyframes scan7 {
   /* Default dim */
